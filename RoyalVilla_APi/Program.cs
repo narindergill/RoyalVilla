@@ -13,6 +13,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
+builder.Services.AddAutoMapper(o => { 
+    o.CreateMap<RoyalVilla_APi.Models.DTO.VillaCreateDTO, RoyalVilla_APi.Models.Villa>();
+    o.CreateMap<RoyalVilla_APi.Models.DTO.VillaUpdateDTO, RoyalVilla_APi.Models.Villa>();
+});
 
 var app = builder.Build();
 await SeedDataAsync(app);
