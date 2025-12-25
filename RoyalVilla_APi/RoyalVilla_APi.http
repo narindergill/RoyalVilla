@@ -1,0 +1,6 @@
+@RoyalVilla_APi_HostAddress = http://localhost:5200
+
+GET {{RoyalVilla_APi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
